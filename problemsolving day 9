@@ -57,45 +57,72 @@
 
 // findSingleNumber([2, 2, 2, 3, 4, 4, 4]) ➞ 3
 
-function nam(arr){
-    let u = []
-    let counts =[]
-    let s=0;
-    for(let i= 0;i<arr.length;i++){
-        let num =arr[i]
-        let found = false;
-        for(let j=0;j<s;i++){
-            if (u[j]=== num){
-                counts[j]++
-                found = true
-                break;
-            }
-        }
-        if (!found){
-            u[s]=num
-            counts[s]=1
-            s++
-        }
-    }
-    for (let  k =0;k<s;k++){
-        if(counts[k]===1){
-            return u[k]
-        }
-    }
-    return null;
+// function nam(arr){
+//     let u = []
+//     let counts =[]
+//     let s=0;
+//     for(let i= 0;i<arr.length;i++){
+//         let num =arr[i]
+//         let found = false;
+//         for(let j=0;j<s;i++){
+//             if (u[j]=== num){
+//                 counts[j]++
+//                 found = true
+//                 break;
+//             }
+//         }
+//         if (!found){
+//             u[s]=num
+//             counts[s]=1
+//             s++
+//         }
+//     }
+//     for (let  k =0;k<s;k++){
+//         if(counts[k]===1){
+//             return u[k]
+//         }
+//     }
+//     return null;
     
-}
-console.log(nam([2,2,2,3,8,8,8]))
+// }
+// console.log(nam([2,2,2,3,8,8,8]))
 // Create a function that takes two strings as arguments and returns the number of times the first string (the single character) is found in the second string.
 // Example:
 
 // charCount("c", "Chamber of secrets") ➞ 1
 
+// function countChar(cha, str) {
+//     let count = 0;
+
+//     for (let i = 0; i < str.length; i++) {
+//         if (str[i] === cha) {
+//             count++;
+//         }
+//     }
+
+//     return count;
+// }
+
+// console.log(countChar("a", "banana")); 
+
+
 // Create a function that takes a string and returns the number (count) of vowels contained within it.
 // Example:
 
 // countVowels("Celebration") ➞ 5
-
+function c(str){
+    let count =0;
+    for(let i=0;i<str.length;i++){
+        let ch =str[i]
+        if(ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u' ||
+            ch === 'A' || ch === 'E' || ch === 'I' || ch === 'O' || ch === 'U'
+            ){
+                count++
+            }
+    }
+    return count;
+}
+console.log(c("hello"))
 // Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
 // Example:
 // reverseCase("Happy Birthday") ➞ "hAPPY bIRTHDAY"
